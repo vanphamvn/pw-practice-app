@@ -67,7 +67,7 @@ test.describe("Form Layouts page", () => {
     });
 });
 
-test("Checkbox", async ({ page }) => {
+test.only("Checkbox", async ({ page }) => {
     await page.getByText("Modal & Overlays").click();
     await page.getByText("Toastr").click();
 
