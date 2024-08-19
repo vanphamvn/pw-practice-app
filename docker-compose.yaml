@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  playwright-van-test:
+    image: playwright-van-image
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    command: npm run plhtest
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
